@@ -1,0 +1,165 @@
+.Profilecard{
+    border-radius: 1vw;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1vw;
+    border : 1px solid  #cfffda;;
+    height: 100%;
+    overflow-x: clip;
+    
+    background-color:#f2fff4;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.profileimages{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+   
+    
+}
+.profileimages>img:nth-of-type(1){
+    width: 100%;
+    height: 10vw;
+    /* border-radius: 3vw; */
+}
+.profileimages>img:nth-of-type(2)
+{
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -3vw;
+    box-shadow:#57cc99;
+}
+.ProfileName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vw;
+    gap: 0.3vw;
+    color: rgb(121, 121, 121);
+    font-weight: 600;
+    /* letter-spacing: 1px; */
+    font-size: 1vw;
+}
+
+.ProfileName>span:nth-of-type(1)
+{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    /* letter-spacing: ; */
+    font-weight: 600;
+    font-size: 1.4vw;
+    
+
+}
+.ProfileName>span:nth-of-type(2){
+  color: grey;
+}
+
+.followStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4vw;
+    color: black;
+    font-size: 0.8vw;
+    padding: 1vw;
+    margin-top: -1vw;
+
+
+  }
+
+  
+  .followStatus > div {
+    display: flex;
+    gap: 1vw;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    color:black;
+    background-color: rgb(255, 255, 255);
+    /* padding: 1vw; */
+    padding: 0.2vw;
+    font-weight: 700;
+    border-radius: 0.6vw;
+    border:0.3px solid rgb(241, 241, 241);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+
+
+  
+  }
+  
+  .follow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4vw;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    /* background-color: antiquewhite; */
+  }
+  .follow > span:nth-of-type(1){
+    font-weight: 500;
+    font-size: 1.5vw;
+  }
+  .follow > span:nth-of-type(2) {
+    color: grey;
+    font-size: 1vw;
+  }
+  .pro{
+    margin-top: 0.8vw;
+    justify-content: center;
+    display: flex;
+    /* margin-bottom: 1vw */
+    
+   
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    background-color:var(--btn-clr);
+    width: 8vw;
+    height: 2vw;
+    color: white;
+    font-weight: 700;
+    border-radius: 3vw;
+    font-size: 1.1vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; 
+    transition: all linear 0.2s; 
+  }
+  /* .pro:hover{
+    background-color: white;
+    color:#38A3A5 ;
+  } */
+  .pro:active{
+    background-color: #57cc99;
+  }
+
+  @media screen and (max-width: 375px) {
+
+    .Profilecard{
+      border-radius: 1vw;
+      /* border: 2px solid red; */
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 1vw;
+      border : 1px solid  #cfffda;;
+      height: 30vw;
+      padding-bottom: 1vw;
+      overflow-x: clip;
+      
+      background-color:#f2fff4;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  }
+
+   
+   
+}

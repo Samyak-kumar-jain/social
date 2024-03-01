@@ -1,0 +1,126 @@
+.sharepost{
+    /* display: flex; */
+    gap: 1vw;
+    /* height: 5vw; */
+    /* background-color: #38A3A5; */
+    background-color: white;
+    padding: 1vw;
+    padding-left: 1.7vw;
+    border-radius: 1vw;
+    /* border: 2px soild red; */
+    /* position: absolute; */
+    overflow-y: auto;
+    /* position: fixed; */
+}
+.share-in{
+    display: flex;
+    gap: 1vw;
+}
+
+
+.sharepost img{
+    border-radius: 50%;
+    width: 3vw;
+    /* height: 3vw; */
+}
+.sharepost input{
+    background-color: #f2fff4;
+    border-radius: 2vw;
+    padding: 0.9vw;
+    font-size: 1vw;
+    border: none;
+    outline: none;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.3vw;
+    height: 2.5vw;
+    border: 0.5px solid rgb(242, 242, 242);
+}
+
+
+
+.share-button{
+    background-color: var(--btn-clr) ;
+    border-radius: 2vw;
+    align-items: center;
+    height: 2vw;
+    width: 7vw;
+    display: flex;
+    justify-content: center;
+    transition: all linear 0.1s;
+    /* border: 0.1vw solid red; */
+
+}
+.share-button button{
+    background-color: transparent;
+    border: none;
+    padding: 0.9vw;
+    font-size:0.9vw;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    font-weight: 700;
+    transition: all linear 0.1s;
+    cursor: pointer;
+    
+   
+}
+.share-button:active{
+    background-color:  #38a3a5;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
+
+.image{
+    background-color: rgb(255, 153, 0);
+    width: 5vw;
+    font-size: 1.5vw;
+    height: 2vw;
+    padding: 1vw;
+    align-items: center; display: flex;
+    justify-content: center;
+    border-radius: 2vw;
+    transition: all linear 0.1s;
+    cursor: pointer;
+    
+  
+
+}
+.image:active{
+    background-color:  #38a3a5;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
+
+ .prof-img img {
+        width: 38vw;
+        border-radius: 1vw;
+        height: 45vw;
+        object-fit: cover;
+        margin-left: 4vw;
+        background-position: center;
+        
+    }
+    .prof-img svg{
+        background-color: rgb(240, 255, 248);
+    }
+    
+    @media screen and (max-width: 320px) {
+
+
+        .sharepost input{
+            background-color: #f2fff4;
+            border-radius: 2vw;
+            padding: 0.9vw;
+            font-size: 1vw;
+            border: none;
+            outline: none;
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            letter-spacing: 0.3vw;
+            height: 2.5vw;
+            border: 0.5px solid rgb(242, 242, 242);
+        }
+        
+       
+    }
+  

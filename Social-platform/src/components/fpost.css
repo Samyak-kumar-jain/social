@@ -1,0 +1,73 @@
+*{
+    color: black;
+}
+.fpost{
+   padding-left:3vw;
+   padding-right: 3vw;
+   padding-top: 1vw;
+   margin-bottom: 1vw;
+  display: flex;
+  justify-content: center;
+}
+.post-box >img{
+    /* width: 100%; */
+    /* width: 41vw; */
+    /* height: 40vw; */
+    object-fit: cover;
+    /* object-position: center; */
+    /* border-radius: 1vw; */
+} 
+.post-box{
+    background-color: #f2fff4;
+    /* padding: 0.5vw; */
+    
+    /* padding: 3vw; */
+    object-fit: cover;
+    
+    gap: 1vw;
+    border-radius: 1vw;
+    overflow-x: clip;
+    margin-top: 1.1vw;
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px solid #cfffda;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.post-box-2{
+    background-color: #defff7f6;
+    padding: 0.5vw;
+    margin: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    gap:0.5vw;
+    height: 100%;
+    border-radius: 0.5vw;
+    border: 0.5px solid rgb(250, 250, 250);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+
+
+
+}
+.postReact{
+    display: flex;
+    gap:1vw;
+    font-size: 0.3vw;
+}
+.postReact img{
+    height: 1.5vw;
+}
+.detail span{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3vw;
+    /* gap:0.2vw; */
+}
+
+
+@media screen and (max-width: 992px) {
+   
+    }
+    

@@ -1,0 +1,62 @@
+
+.logo-search{
+    display: flex;
+    gap:0.3%;
+    /* border: 1px solid black; */
+    width: 100%;
+    align-items: center;
+    
+}
+.search{
+    display: flex;
+    height: 2.3vw;
+    background-color:  #f2fff4;
+    border: 0.1vw solid rgb(241, 241, 241);
+    /* min-width: 70%; */
+    padding: 1%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10vw;
+    
+}
+.search input{
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    
+    padding-left: 1%;
+    background-color:     #f2fff4;
+    width: 100%;
+    font-size: 1vw;
+    
+}
+.ser-ic button {
+    background-color: var(--btn-clr);
+    border: none;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.7vw;
+    border-radius: 2vw;
+    color: white;
+    font-weight: 500;
+    /* width: 130%; */
+    transition: background-color 0.2s; /* Add a smooth transition for the background color */
+}
+
+.ser-ic button:hover {
+    cursor: pointer;
+}
+
+.ser-ic button:active {
+    background-color: #57cc99; /* Change the background color when the button is pressed */
+}
+
+
+
+
+.logo-search img{
+    height: 6vw;
+    
+}

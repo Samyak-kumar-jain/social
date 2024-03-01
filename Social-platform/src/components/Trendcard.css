@@ -1,0 +1,41 @@
+.TrendCard{
+    display: flex;
+    flex-direction: column;
+    gap: 0.9vw;
+    background-color: #f2fff4;
+    padding: 0.5vw;
+    border-radius: 0.7vw;
+    padding-left: 0.vw;
+    margin-top: 2vw;
+}
+.TrendCard h3{
+    font-size: 1.4vw;
+    margin-top: 1vw;
+    /* color: orange; */
+}
+
+
+.trend{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+    font-size: 1vw;
+    background-color: white;
+    padding: 0.5vw;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    border-radius: 1vw;
+
+}
+
+
+.trend>span:nth-of-type(1)
+{
+    font-weight: 700;
+    font-size: 1.2vw;
+     color: var(--btn-clr);
+    
+}
+.trend>span:nth-of-type(2)
+{
+    font-size: 1vw;
+}
