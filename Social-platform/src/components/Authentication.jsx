@@ -48,7 +48,7 @@ function Authentication({onLoginSuccess}) {
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify(data),
-              mode: 'cors', // Add this option
+              mode: 'no-cors', // Add this option
             });
     
             if (response.ok) {
@@ -85,7 +85,7 @@ function Authentication({onLoginSuccess}) {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
-            mode: 'cors', // Add this option
+            mode: 'no-cors', // Add this option
           });
     
           if (response.ok) {
