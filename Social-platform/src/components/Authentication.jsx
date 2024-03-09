@@ -46,7 +46,6 @@ function Authentication({onLoginSuccess}) {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
-                
               },
               body: JSON.stringify(data),
             });
@@ -83,7 +82,6 @@ function Authentication({onLoginSuccess}) {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': 'https://social-8bnm.vercel.app'
             },
             body: JSON.stringify(data),
           });
