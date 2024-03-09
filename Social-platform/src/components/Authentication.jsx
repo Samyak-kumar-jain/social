@@ -42,7 +42,7 @@ function Authentication({onLoginSuccess}) {
           setValidPassword(true);
     
           try {
-            const response = await fetch('https://social-8bnm.vercel.app/auth/register', {
+            const response = await fetch('https://social-tau-ivory.vercel/auth/register', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ function Authentication({onLoginSuccess}) {
       } else {
        
         try {
-          const response = await fetch('https://social-8bnm.vercel.app/auth/login', {
+          const response = await fetch('https://social-tau-ivory.vercel/auth/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
