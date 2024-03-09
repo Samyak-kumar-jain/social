@@ -10,7 +10,9 @@ import cors from 'cors';
 const app = express();
 app.use(bodyParser.json({limit: '30mb', extended: true}));
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
-app.use(cors());
+app.use(cors({
+    origin: 'https://social-8bnm.vercel.app', // Adjust this to your frontend origin
+  }));;
 
 dotenv.config();
 
