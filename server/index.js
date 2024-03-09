@@ -10,9 +10,13 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(
   cors({
-    origin: process.env.NODE_ENV === 'production' ? 'https://social-8bnm.vercel.app' : '*',
+    origin: 'https://social-8bnm.vercel.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
   })
 );
+
 
 
 dotenv.config();
