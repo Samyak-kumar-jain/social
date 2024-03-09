@@ -2,12 +2,19 @@
 import './authentication.css'
 import logo from '../image/so.png';
 import { useState } from 'react';
+import { MdRemoveRedEye } from "react-icons/md";
+import { IoIosEyeOff } from "react-icons/io";
 
 
 
-function Authentication() {
+
+
+function Authentication({onLoginSuccess}) {
 
   const[isSignup,setisSignup]= useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  
+  const [errorMessage, setErrorMessage] = useState('');
 
   const [data,setData] = useState(
     {firstname:"",
@@ -44,11 +51,16 @@ function Authentication() {
             });
     
             if (response.ok) {
-              // Signup successful, you can redirect or perform other actions
+             
+
               console.log('Signup successful');
-            } else {
-              // Signup failed, handle the error
-              console.error('Signup failed');
+              onLoginSuccess();
+            }else if(response.status === 500) {
+              // Login failed, handle the error
+              setErrorMessage("Something Went Wrong PLease Try again");
+            }else if(response.status === 409) {
+              // Login failed, handle the error
+              setErrorMessage("User already exist. Please Login");
             }
           } catch (error) {
             console.error('Error during signup:', error);
@@ -64,8 +76,7 @@ function Authentication() {
           });
         }
       } else {
-        // Handle login similarly with the /api/login endpoint
-        // Use the data object for login credentials
+       
         try {
           const response = await fetch('http://localhost:5000/auth/login', {
             method: 'POST',
@@ -76,11 +87,16 @@ function Authentication() {
           });
     
           if (response.ok) {
-            // Login successful, you can redirect or perform other actions
+              
+          
             console.log('Login successful');
+            onLoginSuccess();
           } else if(response.status === 404) {
             // Login failed, handle the error
-            console.error("User never Exist please signup");
+            setErrorMessage("User never Exist please signup");
+          }else if(response.status === 500) {
+            // Login failed, handle the error
+            setErrorMessage("Something Went Wrong PLease Try again");
           }
         } catch (error) {
           console.error('Error during login:', error);
@@ -98,6 +114,7 @@ function Authentication() {
     };
     
     const resetForm =()=>{
+      setErrorMessage("");
 
       setValidPassword(true);
       setData( {firstname:"",
@@ -112,6 +129,7 @@ function Authentication() {
   return (
     <>
     <div className="authentication">
+    {errorMessage && <div className='error-message'>{errorMessage}</div>}
        <div  className='aut-2'>
         <div className="aut-logo">
             <img src={logo}></img>
@@ -153,31 +171,46 @@ function Authentication() {
         </div>
 
         <div>
+          
           <input
-            type="text"
+            type={showPassword ? 'text' : 'password'}
             className="infoInput"
             name="password"
             placeholder="Password"
             onChange = {onHandleChange}
             value = {data.password}
+          
           />
+          <button
+              type="button"
+              onClick={() => setShowPassword((prev) => !prev)}
+              className="togglePasswordButton"
+              style={{display:"none"}}
+            >
+              {/* {showPassword ? <MdRemoveRedEye /> : <IoIosEyeOff />
+} */}
+            </button>
+         
+          
 
           {isSignup &&( <input
-            type="text"
+             type={showPassword ? 'text' : 'password'}
             className="infoInput"
             name="confirmpass"
             placeholder="Confirm Password"
             onChange = {onHandleChange}
             value = {data.confirmpass}
           />)}
+           
         
         </div>
              <span  style = {{display: validPassword ? "none":"block"}}>Confirm password is not same</span>
+             
             
 
         <div className='line'>
-            <span onClick={()=>{setisSignup((prev)=>!prev); resetForm()}} 
-            style={{fontSize: '1vw',
+            <span className='spans' onClick={()=>{setisSignup((prev)=>!prev); resetForm()}} 
+            style={{
                     textDecoration:'dotted',
                   
                     
@@ -204,3 +237,33 @@ function Authentication() {
 
 
 export default Authentication
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

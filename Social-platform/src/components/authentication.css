@@ -1,5 +1,5 @@
 .authentication{
-  padding-top: -20px;
+  /* padding-top: -20px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,9 +8,56 @@
       /* padding-top: 4vw; */
       height: 100vh;
   
-    margin-bottom: 2vw;
+    margin-bottom: 19vw;
   
 }
+.error-message {
+  background-color: white;
+  color: var(--btn-clr);
+  font-weight: 800;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 2vw;
+  justify-content: center;
+  display: flex;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 0.6vw;
+  padding-bottom: 0.6vw;
+  border-radius: 7px;
+  animation: slideDown 0.5s ease forwards, vibrate 0.5s infinite alternate;
+  transform-origin: top;
+  visibility: hidden; /* Initially hidden */
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 *{
     color: black;
 }
@@ -20,6 +67,7 @@
     align-items: center;
     gap: 1.3vw;
     border-radius: 2vw;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     /* border: 0.5px solid var(--btn-clr); */
     /* height: 100%; */
@@ -47,7 +95,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2vw;
+    gap: 3vw;
     padding: 2vw;
     width: 100%;
    height: 100%;
@@ -71,6 +119,7 @@
     outline: none;
     background-color: #f2fff4;
     border-radius: 8px;
+    width: 100%;
     border: 0.1px solid rgb(238, 238, 238);
   
 
@@ -80,7 +129,7 @@
   
   .infoForm>div{
     display: flex;
-    gap: 1rem;
+    gap: 2vw;
     height: 2rem;
     width: 100%;
   }
@@ -130,4 +179,111 @@
     
   }
   
- 
+  @media (max-width: 425px) {
+    .authentication{
+      /* margin-top: 20vw; */
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+        width: 100%;
+    
+          padding-top: 0vw;
+          /* height: 100vh; */
+      
+        /* margin-bottom: 2vw; */
+      
+    }
+    .aut-2{
+      display: flex;
+      flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1.3vw;
+        border-radius: 2vw;
+        background-color: rgb(255, 255, 255);
+        /* border: 0.5px solid var(--btn-clr); */
+        height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    }
+    .infoForm{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6vw;
+      padding: 2vw;
+      width: 100%;
+     height: 100%;
+     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+     /* border: 0.1px solid #c7f9cc; */
+  
+     
+     
+     border-radius: 1vw;
+     /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+    
+    
+    
+    
+    
+    
+    
+    }  
+    .infoInput{
+      border: none;
+      outline: none;
+      background-color: #f2fff4;
+      border-radius: 8px;
+      border: 0.1px solid rgb(238, 238, 238);
+      width: 100%;
+      font-size: 4vw;
+    
+  
+      padding: 20px;
+      flex:1;
+    }
+    
+    .infoForm>div{
+      display: flex;
+      /* flex-direction: column; */
+      gap: 5vw;
+      height: 9vw;
+      width:100%;
+    }
+    .a-right span{
+      color:var(--btn-clr);
+      font-weight: 500;
+    }
+    .infoButton{
+      width: 100%;
+      margin-top: -8vw;
+      margin-bottom: 4vw;
+      height: 10vw;
+      background-color: var(--btn-clr);
+      border: none;
+      font-size: 5vw;
+      /* padding: 0.5vw; */
+      border-radius: 10vw;
+      color: white;
+      font-weight: 600;
+      /* align-self: flex-end; */
+    }
+    .infoForm h3{
+      font-size: 5vw;
+      margin-bottom: 1vw;
+      color: var(--btn-clr);
+    }
+    .line span{
+      font-size: 3vw;
+     
+  }
+  .aut-logo img{
+    margin-top: -30vw;
+
+    height: 50vw;
+  
+  
+  }
+}

@@ -1,5 +1,7 @@
 import UserModel from "../models/usermodel.js"
 import bcrypt from 'bcrypt'
+import jwt from 'jsonwebtoken';
+
 
 
 
@@ -19,8 +21,14 @@ export const registerUser = async (req, res) => {
      if (existingUser) {
        res.status(409).json({ message: "User already exists. Please login." });
      } else {
-       await newUser.save();
-       res.status(201).json(newUser);
+
+       const user = await newUser.save();
+       const token = jwt.sign({
+         username : user.username,
+         id  : user._id.user,
+
+       },process.env.JWT , {expiresIn: "1h"});
+       res.status(201).json(newUser, {token}, { userId: user._id });
      }
    } catch (error) {
      console.error("Error saving user:", error);
@@ -37,6 +45,7 @@ export const loginuser = async(req,res)=>{
 
    try {
 
+
       const user = await UserModel.findOne({username : username})
 
       if(user){ 
@@ -45,6 +54,9 @@ export const loginuser = async(req,res)=>{
       
 
       if(valid){
+         const htoken = jwt.sign({ userId: user.id, username: user.username });
+
+         res.json({ htoken })
          res.status(200).json({user,message:"succesfully logged in"})
       }else{
          res.status(400).json("wrong password");
