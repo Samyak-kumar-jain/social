@@ -42,13 +42,13 @@ function Authentication({onLoginSuccess}) {
           setValidPassword(true);
     
           try {
-            const response = await fetch('https://social-tau-ivory.vercel.app/auth/register', {
+            const response = await fetch('https://social-8bnm.vercel.app/auth/register', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify(data),
-              mode: 'no-cors', // Add this option
+              
             });
     
             if (response.ok) {
@@ -79,13 +79,13 @@ function Authentication({onLoginSuccess}) {
       } else {
        
         try {
-          const response = await fetch('https://social-tau-ivory.vercel.app/auth/login', {
+          const response = await fetch('https://social-8bnm.vercel.app/auth/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
-            mode: 'no-cors', // Add this option
+           
           });
     
           if (response.ok) {
@@ -102,6 +102,7 @@ function Authentication({onLoginSuccess}) {
           }
         } catch (error) {
           console.error('Error during login:', error);
+          setErrorMessage("An error occurred during login. Please try again.");
         }
     
         // Reset the form
